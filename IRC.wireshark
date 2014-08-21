@@ -1,0 +1,3 @@
+- Shows traffic on TCP ports that are equal to or greater than 6660 and less than or equal to 6669
+
+(tcp.port >= 6660 and tcp.port <= 6669)

@@ -1,4 +1,4 @@
 glowing-wallhack
 ================
 
-Just some random stuffz
+Just some random files and bits of various code...
