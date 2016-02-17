@@ -7,3 +7,6 @@ tcpdump -s 0 -A 'tcp[((tcp[12:1] & 0xf0) >> 2):4] = 0x47455420'
 
 # POST requests
 tcpdump -s 0 -A 'tcp dst port 80 and (tcp[((tcp[12:1] & 0xf0) >> 2):4] = 0x504f5354)'
+
+# Creates one pcap file every 30 min until a total of 48 has been created while capturing traffic to/from port 80
+tcpdump -pni eth0 -s65535 -G 1800 -W 48 -w 'HTTP_%Y-%m-%d_%H%M%S.pcap' port 80
